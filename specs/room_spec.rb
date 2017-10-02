@@ -1,6 +1,5 @@
 require("minitest/autorun")
 require("minitest/rg")
-
 require_relative("../room")
 require_relative("../guest")
 require_relative("../song")

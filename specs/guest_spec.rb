@@ -1,6 +1,5 @@
 require("minitest/autorun")
 require("minitest/rg")
-
 require_relative("../guest")
 require_relative("../song")
 
@@ -23,9 +22,6 @@ class TestGuest < MiniTest::Test
   def test_get_money()
     assert_equal(100, @guest1.get_money())
   end
-
-
-
 
 
 end

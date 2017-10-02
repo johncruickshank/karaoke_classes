@@ -21,18 +21,19 @@ class TestBar < MiniTest::Test
     assert_equal(2, @bar.add_room(@room1).length())
   end
 
-  def test_room_open?()
-    assert_equal(true, @bar.room_open?(@room1))
-  end
+  ## not needed ##
+  # def test_room_open?()
+  #   assert_equal(true, @bar.room_open?(@room1))
+  # end
 
   def test_admit_customer()
-    actual = @bar.admit_customer(@guest3, @room1)
+    actual = @bar.admit_customer(@guest1, @room1)
     assert_equal(3, actual.length)
   end
 
   def test_admit_customer__no()
     actual = @bar.admit_customer(@guest3, @room2)
-    assert_equal(3, actual.length)
+    assert_equal("No admittance", actual)
   end
 
   # def test_space()

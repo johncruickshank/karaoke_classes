@@ -1,13 +1,17 @@
 # require_relative("song")
 require_relative("guest")
 
-class Room < Guest
+class Room
 
   def initialize(fee, playlist, guests, capacity)
     @fee = fee
     @playlist = playlist
     @guests = guests
     @capacity = capacity
+  end
+
+  def guests()
+    return @guests
   end
 
   def add_song(song)
@@ -27,19 +31,11 @@ class Room < Guest
   end
 
   def can_afford?(guest)
-    if guest.get_money >= @fee
-      return true
-    else
-      return "No bling, no sing"
-    end
+    (guest.get_money >= @fee)
   end
 
   def space?()
-    if @guests.length < @capacity
-      return true
-    else
-      return "Sorry, room is full"
-    end
+    @guests.length < @capacity
   end
-
+  
 end

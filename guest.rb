@@ -1,6 +1,6 @@
 require_relative("song")
 
-class Guest < Song
+class Guest 
 
   def initialize(name, fave_song, money)
     @name = name
